@@ -1,7 +1,9 @@
 $( document ).ready(function() 
 {
 
-    let listItem = $("<li>").html("test");
-    $(".top-nav").append(listItem);
+$(".menu-toggler").on("click", function(){
+    $(this).toggleClass("open");
+    $(".top-nav").toggleClass("open");
+});
     
 });
