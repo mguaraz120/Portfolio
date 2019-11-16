@@ -4,6 +4,9 @@ body{
     height: 100%;
     background-size: cover;
 }
+section{
+    padding: 6rem;
+}
 *{
     margin: 0;
     padding: 0;
@@ -17,14 +20,72 @@ html{
 a{
     font-size: 2rem;
     text-decoration: none;
-    color: #eee;  
+    color: #eee; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1500;
+    transition: transform 650ms ease-out;
 }
 p{
     font-weight: 300;
+    font-size: 2rem;
 }
 img{
     width: 100%;
 }
+.container{
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-heading{
+    text-align: center;
+    margin-top: 10rem;
+}
+.section-heading h1{
+    font-size: 3.5rem;
+    color: rgba(255,255,255,.3);
+    text-transform: uppercase;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.section-heading h1::before,
+.section-heading h1::after{
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    transform: translateX(-50%);
+    background-color: rgba(255,255,255, 0.75);
+}
+.section-heading h1::before{
+    display: block;
+    margin-left: 50%;
+    width: 10rem;
+    height: 3px;
+    border-radius: .8rem;
+}
+.section-heading h1::after{
+    display: block;
+    margin-left: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    bottom: -1rem;
+}
+.section-heading h6{
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+.has-margin-right{
+    margin-right: 5rem;
+}
+
 header{
     width: 100%;
     height: 100vh;
@@ -65,16 +126,29 @@ nav-link{
     padding: 1rem;
 }
 .nav-link:hover{
-    background: linear-gradient(to top, #ffe838, #fd57bf);
-    background-clip: text;
+    background: radial-gradient(
+      circle farthest-corner at center center,
+      #ffe838,
+      #fd57bf
+    ) no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
 }
 .nav-link:focus{
-    background: linear-gradient(to top, #ffe838, #fd57bf);    
+background: radial-gradient(
+    circle farthest-corner at center center,
+    #ffe838,
+    #8B008B
+    ) no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
 }
 .top-nav.open{
     top: 0;
     border-radius: initial;
 }
+
 .menu-toggler{
     position: absolute;
     top: 5rem;
@@ -152,4 +226,182 @@ nav-link{
 .landing-text h6{
     font-size: 2rem;
     font-weight: 300;
+}
+.about .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-heading{
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0;
+    margin-bottom: 6rem;
+}
+
+.about-heading h1{
+    font-size: 10rem;
+    opacity: .3;
+}
+.profile-img{
+    flex: 1;
+    margin-right: 5rem;
+}
+.about-details{
+    flex: 1;
+}
+.social-media{
+    margin-top: 5rem;
+}
+.social-media i{
+    font-size: 5rem;
+    transition: color 560ms;
+}
+.fa-facebook-square:hover{
+    color: #4267b2;
+}
+.fa-linkedin-square:hover{
+    color: red;
+    border-radius: 5%;
+    transition: all .1s ease-out;
+}
+.icon-link{
+    margin-right: 20px;
+}
+.my-skills{
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+    text-align: center;
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.skill h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 2rem -2px 2rem 0;
+}
+.icon-container{
+    width: 10rem;
+    height: 10rem;
+    border: 3px solid #ffe838;
+    background-color: #fd57bf;
+    margin-bottom: 2rem;
+    display: flex;
+    transform: rotate(45deg);
+}
+.icon-container i{
+    color:#ffe838 ;
+    font-size: 5rem;
+    margin: auto;
+    transform: rotate(-45deg);
+}
+.portfolio-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+.portfolio-item:last-child{
+    margin-bottom: 0;
+}
+.portfolio-img{
+    flex: 6;
+    margin-top: 4rem;
+}
+.portfolio-description{
+    flex: 1;
+    margin-left: 10%;
+    margin-top: 4rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.portfolio-description h1{
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin: 1rem 0;
+}
+.portfolio-description h6{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: .3;
+}
+.porfolio-description .cta{
+    display: inline-block;
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #3883ff;
+    transition: color 650ms;
+}
+.porfolio-description .cta:hover{
+    color: #2f67cd;
+}
+.contact{
+    background-color:#313534;  
+}
+form{
+    width: 70%;
+    margin: 0 auto;
+}
+form label{
+    font-size: 1.5rem;
+}
+input,
+select,
+textarea{
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 5px;
+    border: none;
+    outline-color: #fd57bf;
+}
+input[type="submit"]{
+    width: initial;
+    background-color: #fd57bf;
+    color: #eee;
+    padding: 1rem 2rem;
+    border-radius: .8rem;
+    cursor: pointer;
+    transition: background-color 650ms;
+}
+input[type="submit"]:hover{
+    color: #221e3f;
+    background-color: #ffe838;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    background-color: #16162d;
+    padding: 2rem 0;
+    position: relative;
+}
+
+#btnScrollToTop{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #e62739;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+#btnScrollToTop:active{
+    background: #cc2333;
+}
+
+.copyright p{
+    font-size: 1.4rem;
 }
