@@ -124,8 +124,12 @@ li{
     float: left;
     margin: 0 2rem;
 }
+.top-nav li .nav-link{
+    margin: 25rem 0 0 12rem;   
+    font-size: 5rem;     
+}
 .nav-link{
-    margin: 20rem 0 0 12rem;   
+    margin: 25rem 0 0 12rem;   
     font-family:'Shadows Into Light', cursive;
     font-size: 5rem;
     padding: 1rem;
@@ -465,8 +469,9 @@ input[type="submit"]:hover{
     li{
         margin: 2rem 0;
     }
-    .top-nav li{
-        margin: 8rem 0 0 1rem;    
+    .top-nav li .nav-link{
+        margin: 8rem 0 0 1rem;   
+        font-size: 5rem;     
     }
     .nav-link{
         margin: 8rem 0 0 1rem;    
@@ -507,8 +512,9 @@ input[type="submit"]:hover{
         margin: 5rem 0 0 1.2rem;    
         font-size: 3.5rem;   
     }
-    .top-nav li{
-        margin: 5rem 0 0 1.2rem;    
+    .top-nav li .nav-link{
+        margin: 5rem 0 0 1.2rem;   
+        font-size: 3.5rem;     
     }
     .about .container{
         flex-direction: column;
