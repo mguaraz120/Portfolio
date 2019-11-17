@@ -1,18 +1,30 @@
 $( document ).ready(function() 
 {
 
-$(".menu-toggler").on("click", function(){
-    $(this).toggleClass("open");
-    $(".top-nav").toggleClass("open");   
-});
-$(".about").on("click", function(){
-    $(this).toggleClass("open");
-    $(".two").toggleClass("open");   
-});
-   const btnScrollToTop = document.querySelector("#btnScrollToTop");
-   btnScrollToTop.addEventListener("click", function(){
-       window.scrollTo(0, 0);
-       $("html, body").animate({scrollTo:0}, "slow"); 
-   })
+    $(".menu-toggler").on("click", function()
+    {
+        $(this).toggleClass("open");
+        $(".top-nav").toggleClass("open");   
+    });
 
+    $(".top-nav .nav-link").on("click", function()
+    {
+        $(".menu-toggler").removeClass("open");
+        $(".top-nav").removeClass("open");
+
+    });
+
+    $('nav a[href*="#"').on("click", function()
+    {
+        $("html, body").animate({
+            scrollTop:$($(this).attr("href")).offset().top -100
+        }, 2000);
+
+    });
+    
+    $('#btnTop').on("click", function()
+    {
+        $("html, body").animate({scrollTop: 0}, 2000);
+
+    });
 });

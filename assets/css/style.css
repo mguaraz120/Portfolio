@@ -1,11 +1,11 @@
 body{
-    background: url(../images/sitebg2.jpg);
+    background: url(../images/sitebg.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;
 }
 section{
-    padding: 6rem;
+    padding: 6rem 0;
 }
 *{
     margin: 0;
@@ -29,6 +29,7 @@ a{
     transition: transform 650ms ease-out;
 }
 p{
+    font-family: 'PT Sans', sans-serif;
     font-weight: 300;
     font-size: 2rem;
 }
@@ -48,6 +49,7 @@ img{
     margin-top: 10rem;
 }
 .section-heading h1{
+    font-family: 'Roboto Condensed', sans-serif; 
     font-size: 3.5rem;
     color: rgba(255,255,255,.3);
     text-transform: uppercase;
@@ -101,6 +103,8 @@ header{
     border-bottom-left-radius: 100%;
     transition: all 650ms cubic-bezier(1,0,0,1);
 }
+
+
 .nav-list{
     list-style: none;
     width: 100%;
@@ -115,12 +119,13 @@ header{
 .porfolio-description{
     flex: 1;
 }
-li{
+li{   
     list-style-type: none;
     float: left;
     margin: 0 2rem;
 }
-nav-link{
+.nav-link{
+    margin: 20rem 0 0 12rem;   
     font-family:'Shadows Into Light', cursive;
     font-size: 5rem;
     padding: 1rem;
@@ -212,7 +217,7 @@ background: radial-gradient(
     font-size: 80px;
     line-height: 0.9;
     padding: 20px;
-    font-family: 'Syncopate', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     text-transform: uppercase;
     background: radial-gradient(
       circle farthest-corner at center center,
@@ -240,8 +245,18 @@ background: radial-gradient(
 }
 
 .about-heading h1{
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 10rem;
     opacity: .3;
+}
+.about-heading h6{
+    margin: 4rem 0 0 0;
+    text-align: center;
+    font-size: 2rem;
+}
+.aboutMe{
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
 }
 .profile-img{
     flex: 1;
@@ -265,8 +280,12 @@ background: radial-gradient(
     border-radius: 5%;
     transition: all .1s ease-out;
 }
+.fa-github:hover{
+    color: #2f67cd;
+}
 .icon-link{
-    margin-right: 20px;
+    float: left;
+    margin: 10px;
 }
 .my-skills{
     margin-top: 10rem;
@@ -284,6 +303,7 @@ background: radial-gradient(
 }
 
 .skill h1{
+    font-family: 'Roboto Condensed', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 2rem -2px 2rem 0;
@@ -303,6 +323,25 @@ background: radial-gradient(
     margin: auto;
     transform: rotate(-45deg);
 }
+.gallery{
+    position: relative;
+    margin: 20px 20px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 400px;
+    height: 260px;
+}
+.portfolio-item .gallery:hover {
+    border: 2px solid #2f67cd;
+}
+.gallery img {
+    width: 100%;
+    height: 100%;
+}
+.desc {
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
 .portfolio-item{
     display: flex;
     align-items: center;
@@ -313,17 +352,18 @@ background: radial-gradient(
     margin-bottom: 0;
 }
 .portfolio-img{
-    flex: 6;
+    flex: 1;
     margin-top: 4rem;
 }
 .portfolio-description{
     flex: 1;
-    margin-left: 10%;
     margin-top: 4rem;
+    margin-left: 10rem;
     font-size: 1.5rem;
     font-weight: 300;
 }
 .portfolio-description h1{
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 3.5rem;
     font-weight: 300;
     margin: 1rem 0;
@@ -385,7 +425,7 @@ input[type="submit"]:hover{
     position: relative;
 }
 
-#btnScrollToTop{
+#btnTop{
     position: fixed;
     right: 10px;
     bottom: 10px;
@@ -398,10 +438,105 @@ input[type="submit"]:hover{
     outline: none;
     cursor: pointer;
 }
-#btnScrollToTop:active{
+#btnTop:active{
     background: #cc2333;
 }
 
 .copyright p{
     font-size: 1.4rem;
 }
+
+@media screen and (max-width: 768px){
+    body{
+        background: url(../images/sitebg2.jpg);
+        background-size: cover;
+    }
+    }
+    .landing-text h1{
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 15rem;
+    }
+    .landing-text h6{
+        font-size: 4rem;
+    }
+    .nav-list{
+        flex-direction: column;
+    }
+    li{
+        margin: 2rem 0;
+    }
+    .top-nav li{
+        margin: 8rem 0 0 1rem;    
+    }
+    .nav-link{
+        margin: 8rem 0 0 1rem;    
+        font-size: 2.5rem;       
+    }
+    .about-heading h1{
+        font-size: 5rem;
+    }
+    .section-heading h1{
+        font-size: 2rem;
+    }
+    .about-details .nav-list{
+        flex-direction: initial;
+    }
+    .about-details li{
+        margin: 0 2rem;
+    }
+    .icon-container{
+        width: 7rem;
+        height: 7rem;
+    }
+    .icon-container i{
+        font-size: 4rem;
+    }
+
+@media screen and (max-width: 600px){
+    .menu-toggler{
+        top: 2rem;
+        right: 2rem;
+    }
+    .landing-text h1{
+        font-size: 8rem;
+    }
+    .landing-text h6{
+        font-size: 1.4rem;
+    }
+    .nav-link{
+        margin: 5rem 0 0 1.2rem;    
+        font-size: 3.5rem;   
+    }
+    .top-nav li{
+        margin: 5rem 0 0 1.2rem;    
+    }
+    .about .container{
+        flex-direction: column;
+    }
+    .profile-img{
+        margin-top: 0 0 7rem 0;
+        order: 1;
+    }
+    .portfolio-item{
+        flex-direction: column;
+    }
+    .porfolio-img{
+        margin: 2rem 0 0 0;      
+    }
+    .gallery{
+        order: 1;
+    }
+    .porfolio-description{
+        margin: 0;
+        order: 2;
+    }
+    .about-details{
+        margin: 7rem 0 0 0;
+        order: 2;
+    }
+    form{
+        width: 100%;
+    }
+
+}
+
