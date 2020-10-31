@@ -339,6 +339,8 @@ li {
 }
 .portfolio-item .gallery:hover {
   border: 2px solid #2f67cd;
+  -webkit-transform: scale(2.1);
+  transform: scale(2.1);
 }
 .MainIcons img {
   margin-left: 7%;
@@ -369,10 +371,15 @@ li {
   flex: 1;
   margin-top: 4rem;
 }
+.left {
+  margin-left: 15%;
+}
+.right {
+  margin-right: 15%;
+}
 .portfolio-description {
   flex: 1;
   margin-top: 4rem;
-  margin-left: 15rem;
   font-size: 1.5rem;
   font-weight: 300;
 }
